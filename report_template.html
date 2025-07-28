@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 12pt;           
+  line-height: 1.4;
+  padding: 40px;
+  background: #f9f9f9;
+  color: #000;               
+}
+
+h1, h2 {
+  color: #0077cc;
+  font-size: 14pt;          
+}
+
+h3, h4, h5, h6 {
+  font-size: 13pt;          
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 12pt;           
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  font-size: 12pt;          
+}
+ 
+th {
+  background-color: #0077cc;
+  color: white;
+}
+
+.insights {
+  background-color: #eef6ff;
+  padding: 15px;
+  border-left: 5px solid #0077cc;
+  margin-top: 30px;
+  font-size: 12pt;
+}
+
+.chart {
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+ <h1>Monthly Ad Report - {{ month }}</h1>
+  <div>
+    {{ summary_table | safe }}
+    <h3>Daily Spend</h3>
+    {{ spend_chart | safe }}
+
+    <h3>Daily Clicks</h3>
+    {{ clicks_chart | safe }}
+
+    <h3>Daily Impressions</h3>
+    {{ impressions_chart | safe }}
+
+    <h3>Daily Conversions</h3>
+    {{ conversions_chart | safe }}
+
+    <h3>CTR (%) Over Time</h3>
+    {{ ctr_chart | safe }}
+
+    <h3>Cost vs Conversions</h3>
+    {{ cost_vs_conversions | safe }}
+
+
+
+    <h3>insights</h3>
+    {{ insights | safe }}   
+
+
+  </div>
+
+  <footer>&copy; 2025 Solivox AI - Generated Automatically</footer>
+</body>
+</html>
